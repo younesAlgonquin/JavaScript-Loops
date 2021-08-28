@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Area Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Computer Engineering Technology - Computing Science <br /> Web Programming</h1>
+  
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+	
+	<div class="col-sm-4">
+
+	<nav class="navbar navbar-expand-sm bg-light-grey navbar-dark" style="background:Gainsboro; margin-top:5%">
+
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navflex-column">
+			
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/index.html">Index</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/Diamond.html">Diamond</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/AreaCalculator.html">Area Calculator</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/BottlesOfBeer.html">Bottles Of Beer</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/Fibonacci.html">Fibonacci Generator</a>
+		  </li>
+		</ul>
+	  </div>  
+	</nav>
+	</div>
+	
+    <div class="col-sm-8" style="margin-top:2%">
+	
+		
+		<body>
+				
+			<script>
+			
+				let option = prompt("Please enter the shape you want to calculate the area\n1:Triangle, 2:Rectangle, 3:Circle");
+			
+					if (isNaN(parseFloat(option)) || (option!=1 && option!=2 && option!=3)){
+					do {
+				
+						option = prompt("Please enter the shape you want to calculate the area\n1:Triangle, 2:Rectangle, 3:Circle");
+					
+					} while (isNaN(parseFloat(option)) ||(option!=1 && option!=2 && option!=3));
+				
+				}
+				
+				if(option==1){
+				
+				let height = prompt("please enter the height of the triangle in ft");
+				
+					if (isNaN(parseFloat(height)) || height<0){
+					
+						do{
+							height = prompt("please enter the height of the triangle in ft");
+						} while (isNaN(parseFloat(height)) || height<0);
+					}
+					
+				
+				let base = prompt("please enter the base of the triangle in ft");
+				
+					if (isNaN(parseFloat(base)) || base<0){
+					
+						do{
+							base = prompt("please enter the base of the triangle in ft");
+						} while (isNaN(parseFloat(base)) || base<0);
+					}
+					
+				let area = (height*base)/2;
+				
+				document.write("Area of the triangle is " + area + " sqft");
+					
+				}
+				
+				
+
+				if(option==2){
+				
+				let length = prompt("please enter the length of the rectangle in ft");
+				
+					if (isNaN(parseFloat(length)) || length<0){
+					
+						do{
+							length = prompt("please enter the length of the rectangle in ft");
+						} while (isNaN(parseFloat(length)) || length<0);
+					}
+					
+				
+				let width = prompt("please enter the width of the rectangle in ft");
+				
+					if (isNaN(parseFloat(width)) || width<0){
+					
+						do{
+							width = prompt("please enter the width of the rectangle in ft");
+						} while (isNaN(parseFloat(width)) || width<0);
+					}
+					
+				let area = length*width;
+				
+				document.write("Area of the rectangle is " + area + " sqft");
+					
+				}
+				
+				
+
+				if(option==3){
+				
+				let radius = prompt("please enter the radius of the circle in ft");
+				
+					if (isNaN(parseFloat(radius)) || radius<0){
+					
+						do{
+							radius = prompt("please enter the radius of the circle in ft");
+						} while (isNaN(parseFloat(radius)) || radius<0);
+					}
+					
+					
+				let area = 3.1416*radius*radius;
+				
+				document.write("Area of the circle is " + area + " sqft");
+					
+				}					
+
+			</script> 
+		
+		</body>
+    </div>
+    
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p> <h1> Footer </h1> </p>
+  <p> <h5>041019068</h5></p>
+  <p> <h5>Younes Boutaleb </h5></p>
+  <p> <h5>bout0144@algonquinlive.com </h5></p>
+  
+</div>
+
+</body>
+</html>

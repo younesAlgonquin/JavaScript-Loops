@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fibonacci Sequence Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="StyleSheet.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Computer Engineering Technology - Computing Science <br /> Web Programming</h1>
+  
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+	
+	<div class="col-sm-4">
+
+	<nav class="navbar navbar-expand-sm bg-light-grey navbar-dark" style="background:Gainsboro; margin-top:5%">
+
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navflex-column">
+			
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/index.html">Index</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/Diamond.html">Diamond</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/AreaCalculator.html">Area Calculator</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/BottlesOfBeer.html">Bottles Of Beer</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Assignment1/Fibonacci.html">Fibonacci Generator</a>
+		  </li>
+		</ul>
+	  </div>  
+	</nav>
+	</div>
+	
+    <div class="col-sm-8" style="margin-top:2%">
+	
+		
+		<body>
+				
+			<script>
+			
+				let max = prompt("How many fibonacci numbers you want to genetate");
+				
+				if(isNaN(parseFloat(max)) || max <=1){
+				
+					do{
+					max=prompt("How many fibonacci numbers you want to genetate");
+					}while(isNaN(parseFloat(max)) || max <=1);
+				}
+				
+				let x=0;
+				let y=1;
+				let z=0;
+				
+				document.write("<p>fib[0] = 0</p><p>fib[1] = 1</p>");
+				
+
+				for(i=2; i<=max; i++){
+				
+					z=x+y;
+					x=y;
+					y=z;
+					document.write("<p>fib[" + i + "] = " + z + "</p>");
+				}
+				
+			</script> 
+		
+		</body>
+    </div>
+    
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p> <h1> Footer </h1> </p>
+  <p> <h5>041019068</h5></p>
+  <p> <h5>Younes Boutaleb </h5></p>
+  <p> <h5>bout0144@algonquinlive.com </h5></p>
+  
+</div>
+
+</body>
+</html>
